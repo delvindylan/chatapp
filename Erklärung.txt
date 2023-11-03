@@ -1,0 +1,1 @@
+Dies ist ein Chatsystem mit herkömmlichen Funktionen, man kann aber mit mehreren Accounts gleichzeitig arbeiten und sich spezifische Gruppen (zum sortieren) erstellen.
