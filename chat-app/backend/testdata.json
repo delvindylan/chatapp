@@ -1,0 +1,22 @@
+{
+    "users": [
+      { "id": 1, "username": "Alice" },
+      { "id": 2, "username": "Bob" },
+      { "id": 3, "username": "Charlie" },
+      { "id": 4, "username": "David" },
+      { "id": 5, "username": "Eva" }
+    ],
+    "messages": [
+      { "id": 1, "sender": 1, "recipient": 2, "text": "Hello, Bob!" },
+      { "id": 2, "sender": 2, "recipient": 1, "text": "Hi, Alice! How are you?" },
+      { "id": 3, "sender": 1, "recipient": 2, "text": "I'm doing well, thanks! How about you?" },
+      { "id": 4, "sender": 2, "recipient": 1, "text": "Not bad. Just busy with work." },
+      { "id": 5, "sender": 3, "recipient": 1, "text": "Hey, Alice! Long time no see." },
+      { "id": 6, "sender": 1, "recipient": 3, "text": "Charlie! It has been a while. How are you?" },
+      { "id": 7, "sender": 3, "recipient": 1, "text": "I'm good, thanks. Let's catch up soon!" },
+      { "id": 8, "sender": 4, "recipient": 5, "text": "Hey Eva, do you have the meeting notes?" },
+      { "id": 9, "sender": 5, "recipient": 4, "text": "Yes, I'll send them to you shortly." },
+      { "id": 10, "sender": 4, "recipient": 5, "text": "Thanks!" }
+    ]
+  }
+  
