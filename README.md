@@ -1,6 +1,7 @@
-# Simple Chat App
+# Chat Messenger
 
-Welcome to the Simple Chat App! This lightweight chat application allows users to communicate in real-time.
+This stack consist of:
+
 
 ## Features
 
@@ -11,6 +12,9 @@ Welcome to the Simple Chat App! This lightweight chat application allows users t
 ## Getting Started
 
 1. Clone this repository:
+   ```bash 
+   git clone https://github.com/delvindylan/chatapp.git
 
-   ```bash
-   git clone https://github.com/your-username/simple-chat-app.git
+2. Run:
+   ```bash 
+   npm i express mongoose body-parser nodemon
