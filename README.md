@@ -15,6 +15,10 @@ This stack consist of:
    ```bash 
    git clone https://github.com/delvindylan/chatapp.git
 
-2. Run:
+2. Run in frontend:
    ```bash 
-   npm i express mongoose body-parser nodemon
+   npm install
+
+3. Run in backend:
+   ```bash 
+   npm install
