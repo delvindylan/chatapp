@@ -28,20 +28,16 @@ export default function ChatInput({ handleSendMsg }) {
   return (
     <Container>
       <div className="button-container">
-        <div className="emoji">
-          <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
-          {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
-        </div>
       </div>
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
         <input
           type="text"
-          placeholder="type your message here"
+          placeholder="Enter Message"
           onChange={(e) => setMsg(e.target.value)}
           value={msg}
         />
         <button type="submit">
-          <IoMdSend />
+          <div>send</div>
         </button>
       </form>
     </Container>
@@ -52,7 +48,6 @@ const Container = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 5% 95%;
-  background-color: #080420;
   padding: 0 2rem;
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     padding: 0 1rem;
@@ -100,11 +95,12 @@ const Container = styled.div`
   }
   .input-container {
     width: 100%;
-    border-radius: 2rem;
     display: flex;
     align-items: center;
     gap: 2rem;
     background-color: #ffffff34;
+    margin-bottom: 300px;
+
     input {
       width: 90%;
       height: 60%;
@@ -122,13 +118,15 @@ const Container = styled.div`
       }
     }
     button {
+      color: white;
       padding: 0.3rem 2rem;
-      border-radius: 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #9a86f3;
+      background-color: purple;
       border: none;
+      font-size: 1.5rem;
+      font-family: "Poppins", sans-serif;
       @media screen and (min-width: 720px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;
         svg {

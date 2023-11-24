@@ -22,8 +22,7 @@ export default function Contacts({ contacts, changeChat }) {
       {currentUserImage && currentUserImage && (
         <Container>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h3>snappy</h3>
+            <h3>Chubby</h3>
           </div>
           <div className="contacts">
             {contacts.map((contact, index) => {
@@ -36,10 +35,6 @@ export default function Contacts({ contacts, changeChat }) {
                   onClick={() => changeCurrentChat(index, contact)}
                 >
                   <div className="avatar">
-                    <img
-                      src={`data:image/svg+xml;base64,${contact.avatarImage}`}
-                      alt=""
-                    />
                   </div>
                   <div className="username">
                     <h3>{contact.username}</h3>
@@ -50,13 +45,10 @@ export default function Contacts({ contacts, changeChat }) {
           </div>
           <div className="current-user">
             <div className="avatar">
-              <img
-                src={`data:image/svg+xml;base64,${currentUserImage}`}
-                alt="avatar"
-              />
+
             </div>
             <div className="username">
-              <h2>{currentUserName}</h2>
+              <h2>logged in as: <span>{currentUserName}</span></h2>
             </div>
           </div>
         </Container>
@@ -68,7 +60,11 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  background-color: #080420;
+
+  span {
+    color: purple;
+  }
+  
   .brand {
     display: flex;
     align-items: center;
@@ -97,11 +93,10 @@ const Container = styled.div`
       }
     }
     .contact {
-      background-color: #ffffff34;
+      background: linear-gradient(75deg, rgb(74, 54, 91) 0%, rgba(60, 27, 86, 0.747) 50%, rgba(26, 20, 33, 0.831) 100%);
       min-height: 5rem;
       cursor: pointer;
       width: 90%;
-      border-radius: 0.2rem;
       padding: 0.4rem;
       display: flex;
       gap: 1rem;
@@ -119,12 +114,11 @@ const Container = styled.div`
       }
     }
     .selected {
-      background-color: #9a86f3;
+      background-color: pink;
     }
   }
 
   .current-user {
-    background-color: #0d0d30;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,6 +132,9 @@ const Container = styled.div`
     .username {
       h2 {
         color: white;
+        position: absolute;
+        top: 50px;
+        right: 50px;
       }
     }
     @media screen and (min-width: 720px) and (max-width: 1080px) {

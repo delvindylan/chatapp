@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { Buffer } from "buffer";
-import loader from "../assets/loader.gif";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
@@ -68,12 +67,12 @@ export default function SetAvatar() {
     <>
       {isLoading ? (
         <Container>
-          <img src={loader} alt="loader" className="loader" />
+          <span>loading...</span>
         </Container>
       ) : (
         <Container>
           <div className="title-container">
-            <h1>Pick an Avatar as your profile picture</h1>
+            <h1>Choose an Avatar</h1>
           </div>
           <div className="avatars">
             {avatars.map((avatar, index) => {
@@ -109,12 +108,17 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  background-color: #131324;
+  background: linear-gradient(75deg, rgb(74, 54, 91) 0%, rgba(60, 27, 86, 0.747) 50%, rgba(26, 20, 33, 0.831) 100%);
   height: 100vh;
   width: 100vw;
 
   .loader {
     max-inline-size: 100%;
+  }
+
+  span {
+    color: white;
+    font-size: 3rem;
   }
 
   .title-container {
@@ -133,18 +137,16 @@ const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: 0.5s ease-in-out;
       img {
         height: 6rem;
-        transition: 0.5s ease-in-out;
       }
     }
     .selected {
-      border: 0.4rem solid #4e0eff;
+      border: 0.4rem solid purple;
     }
   }
   .submit-btn {
-    background-color: #4e0eff;
+    background: linear-gradient(75deg, rgb(74, 54, 91) 0%, rgba(60, 27, 86, 0.747) 50%, rgba(26, 20, 33, 0.831) 100%);
     color: white;
     padding: 1rem 2rem;
     border: none;

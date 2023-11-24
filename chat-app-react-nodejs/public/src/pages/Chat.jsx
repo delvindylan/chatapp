@@ -69,10 +69,10 @@ const Container = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #131324;
+  background: linear-gradient(75deg, rgb(74, 54, 91) 0%, rgba(60, 27, 86, 0.747) 50%, rgba(26, 20, 33, 0.831) 100%);
   .container {
-    height: 85vh;
-    width: 85vw;
+    height: 100%;
+    width: 100%;
     background-color: #00000076;
     display: grid;
     grid-template-columns: 25% 75%;

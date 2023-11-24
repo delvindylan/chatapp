@@ -18,22 +18,26 @@ export default function Logout() {
   };
   return (
     <Button onClick={handleClick}>
-      <BiPowerOff />
+      Log out
     </Button>
   );
 }
 
 const Button = styled.button`
   display: flex;
+  color: white;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  border-radius: 0.5rem;
-  background-color: #9a86f3;
+  background-color: purple;
   border: none;
   cursor: pointer;
+  font-size: 1.1rem;
   svg {
-    font-size: 1.3rem;
+    font-size: 2rem;
     color: #ebe7ff;
   }
+  position: absolute;
+  bottom: 100px;
+  left: 140px;
 `;

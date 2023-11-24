@@ -61,13 +61,16 @@ export default function Login() {
     }
   };
 
+  const onClickRegister = () => {
+    navigate("/register");
+  }
+
   return (
     <>
       <FormContainer>
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+            <h1>Welcome to Chubby👋</h1>
           </div>
           <input
             type="text"
@@ -83,9 +86,8 @@ export default function Login() {
             onChange={(e) => handleChange(e)}
           />
           <button type="submit">Log In</button>
-          <span>
-            Don't have an account ? <Link to="/register">Create One.</Link>
-          </span>
+          
+          <button type="button" onClick={onClickRegister} >Register</button>
         </form>
       </FormContainer>
       <ToastContainer />
@@ -101,7 +103,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #131324;
+  background: linear-gradient(75deg, rgb(74, 54, 91) 0%, rgba(60, 27, 86, 0.747) 50%, rgba(26, 20, 33, 0.831) 100%);
   .brand {
     display: flex;
     align-items: center;
@@ -121,16 +123,18 @@ const FormContainer = styled.div`
     flex-direction: column;
     gap: 2rem;
     background-color: #00000076;
-    border-radius: 2rem;
     padding: 5rem;
+    height: 100%;
+    width: 100%;
   }
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
+    border: 0.1rem solid white;
     border-radius: 0.4rem;
     color: white;
-    width: 100%;
+    margin-left: 21rem;
+    width: 50%;
     font-size: 1rem;
     &:focus {
       border: 0.1rem solid #997af0;
@@ -138,7 +142,7 @@ const FormContainer = styled.div`
     }
   }
   button {
-    background-color: #4e0eff;
+    background: linear-gradient(75deg, rgb(74, 54, 91) 0%, rgba(60, 27, 86, 0.747) 50%, rgba(26, 20, 33, 0.831) 100%);
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -147,6 +151,8 @@ const FormContainer = styled.div`
     border-radius: 0.4rem;
     font-size: 1rem;
     text-transform: uppercase;
+    width: 50%;
+    margin-left: 21rem;
     &:hover {
       background-color: #4e0eff;
     }
@@ -155,9 +161,18 @@ const FormContainer = styled.div`
     color: white;
     text-transform: uppercase;
     a {
-      color: #4e0eff;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
+  .register-button {
+    color: white;
+    text-transform: uppercase;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    
+  }
   }
 `;

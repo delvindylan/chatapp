@@ -40,7 +40,7 @@ export default function Register() {
         "Password and confirm password should be same.",
         toastOptions
       );
-      return false;
+      return true;
     } else if (username.length < 3) {
       toast.error(
         "Username should be greater than 3 characters.",
@@ -89,8 +89,7 @@ export default function Register() {
       <FormContainer>
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+            <h1>Chubby Register</h1>
           </div>
           <input
             type="text"
@@ -110,15 +109,10 @@ export default function Register() {
             name="password"
             onChange={(e) => handleChange(e)}
           />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            name="confirmPassword"
-            onChange={(e) => handleChange(e)}
-          />
+          
           <button type="submit">Create User</button>
           <span>
-            Already have an account ? <Link to="/login">Login.</Link>
+            Already have an account? <Link to="/login">Login.</Link>
           </span>
         </form>
       </FormContainer>
@@ -135,7 +129,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #131324;
+  background: linear-gradient(75deg, rgb(74, 54, 91) 0%, rgba(60, 27, 86, 0.747) 50%, rgba(26, 20, 33, 0.831) 100%);
   .brand {
     display: flex;
     align-items: center;
@@ -151,6 +145,8 @@ const FormContainer = styled.div`
   }
 
   form {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -161,18 +157,20 @@ const FormContainer = styled.div`
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
+    border: 0.1rem solid white;
     border-radius: 0.4rem;
     color: white;
     width: 100%;
     font-size: 1rem;
+    margin-left: 21rem;
+    width: 50%;
     &:focus {
       border: 0.1rem solid #997af0;
       outline: none;
     }
   }
   button {
-    background-color: #4e0eff;
+    background: linear-gradient(75deg, rgb(74, 54, 91) 0%, rgba(60, 27, 86, 0.747) 50%, rgba(26, 20, 33, 0.831) 100%);
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -181,6 +179,8 @@ const FormContainer = styled.div`
     border-radius: 0.4rem;
     font-size: 1rem;
     text-transform: uppercase;
+    margin-left: 21rem;
+    width: 50%;
     &:hover {
       background-color: #4e0eff;
     }
@@ -188,8 +188,9 @@ const FormContainer = styled.div`
   span {
     color: white;
     text-transform: uppercase;
+    margin-left: 32rem;
     a {
-      color: #4e0eff;
+      color: purple;
       text-decoration: none;
       font-weight: bold;
     }
